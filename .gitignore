@@ -1,0 +1,8 @@
+out/
+upstream/
+*.img
+*.zip
+*.apk
+*.jks
+*.pem
+*.pk8

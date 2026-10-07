@@ -1,0 +1,14 @@
+java_library {
+    name: "goodman-aa-transport",
+    srcs: ["java/**/*.java"],
+    sdk_version: "current",
+    min_sdk_version: "36",
+    installable: false,
+    visibility: ["//visibility:public"],
+}
+
+filegroup {
+    name: "goodman-projection-integration",
+    srcs: ["integration/**/*.java"],
+    visibility: ["//packages/apps/GoodmanCarBridge"],
+}

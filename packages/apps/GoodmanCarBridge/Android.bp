@@ -1,0 +1,27 @@
+android_app {
+    name: "GoodmanCarBridge",
+    package_name: "kr.goodman.carbridge",
+    manifest: "AndroidManifest.xml",
+    srcs: ["src/**/*.java", ":goodman-projection-integration"],
+    sdk_version: "core_platform",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    // Resolve the HFP client's hidden APIs before framework's SystemApi stubs.
+    // Matches framework-bluetooth-tests-defaults and android.car.builtin-defaults.
+    libs: [
+        "framework-bluetooth.impl",
+        "framework",
+        "framework-res",
+    ],
+    static_libs: ["goodman-car-core", "goodman-aa-transport"],
+    privapp_allowlist: "privapp-permissions-goodman-car.xml",
+    optimize: { enabled: false },
+}
+
+java_library {
+    name: "goodman-car-core",
+    srcs: ["core/**/*.java"],
+    sdk_version: "core_current",
+    visibility: ["//visibility:public"],
+}

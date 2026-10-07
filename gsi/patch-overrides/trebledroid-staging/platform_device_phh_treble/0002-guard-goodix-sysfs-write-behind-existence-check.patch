@@ -1,0 +1,12 @@
+diff --git a/rw-system.sh b/rw-system.sh
+--- a/rw-system.sh
++++ b/rw-system.sh
+@@ -1249,5 +1249,7 @@
+ # Enable pen mode on Lenovo/goodix
+-echo 1 > /sys/devices/platform/goodix_ts.0/support_pen
++if [ -e /sys/devices/platform/goodix_ts.0/support_pen ]; then
++    echo 1 > /sys/devices/platform/goodix_ts.0/support_pen
++fi
+ 
+ # Samsung's sw Codec2 service seccomp policy only allows mremap with
+ # MREMAP_MAYMOVE|MREMAP_FIXED, but the current bionic allocator uses other

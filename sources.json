@@ -1,0 +1,35 @@
+{
+  "base": {
+    "repository": "https://github.com/LineageOS/android.git",
+    "branch": "lineage-23.2",
+    "observed_commit": "eabe68377217a88c81fa933db0136ea4146ff369"
+  },
+  "devices": {
+    "SM-N976N": {
+      "candidate_codename": "d2x",
+      "repository": "https://github.com/LineageOS/android_device_samsung_d2x.git",
+      "branch": "lineage-23.2",
+      "observed_commit": "91549e8d8205f01632588bcef0f13155877e4aa6",
+      "upstream_product_model": "SM-N976B",
+      "status": "Korean variant port required; not flash-ready"
+    },
+    "SM-G991N": {
+      "candidate_codename": "o1s",
+      "status": "LineageOS 23.2 device/kernel/vendor sources not yet verified"
+    }
+  },
+  "build": {
+    "type": "GSI",
+    "product": "goodman_arm64_bgN4",
+    "lunch": "goodman_arm64_bgN4-bp4a-userdebug",
+    "architecture": "arm64",
+    "filesystem": "ext4",
+    "google_apps": "MindTheGapps/vendor_gapps:baklava",
+    "artifact": "raw system.img",
+    "treble_manifest_commit": "565a797840c5aace0a7c6e3d52773af80fee2802",
+    "treble_device_commit": "91031960bf9f5ccf4e0af412db12138b7e26bd5b",
+    "gsi_patches_commit": "7bf212f449d1aa253ebc97b1ab3c4924be88effa",
+    "note10_system_partition_bytes": 6480199680,
+    "device_sources": "Reference only; GSI uses existing device kernel/vendor"
+  }
+}
